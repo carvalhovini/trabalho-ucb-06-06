@@ -1,0 +1,411 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <windows.h>
+#include <string.h>
+#include <locale.h>
+#include<conio.h>
+
+int main(){
+	system("color F");
+	setlocale(LC_ALL, "Portuguese");
+	
+	int menu1, menu2, menu3, menu4;
+	char email[51], senha1[31], nome[51], senha2[20], senha3[20], cpf[12], tel[12];
+	
+inicio:
+	printf("------------------------\n");
+	printf("|BEM VINDO A SMART LOOK|\n");
+	printf("------------------------\n\n");
+	
+	printf("|1 - LOGIN \n");
+	printf("|2 - CADASTRAR\n");
+	
+	scanf("%d", &menu1);
+	
+	if(menu1 >= 3 ){
+		printf("DIGITE UM NUMERO VALIDO\n");
+		goto inicio;
+	}
+	
+	system("cls");
+	
+	switch(menu1)
+	{
+		case 1:
+			
+			printf("------------------------\n");
+			printf("         LOGIN          \n");
+			printf("------------------------\n");
+	
+			printf("\n|EMAIL:\n");
+				printf("|");
+			scanf("%s", &email);
+				printf("|SENHA:\n");
+				printf("|");
+			scanf("%s", &senha1);
+
+	system("pause");
+	system("cls");
+			
+						goto meio;
+			
+			break;
+			
+		case 2:
+			
+			voltar:
+			printf("------------------------\n");
+			printf("        CADASTRO        \n");
+			printf("------------------------\n");
+			
+				printf("\n\n|NOME:\n|");
+			gets(nome);
+			fgets(nome, sizeof(nome), stdin);
+				printf("\n|EMAIL:\n");
+				printf("|");
+			scanf("%s", &email);
+				printf("\n|TELEFONE:\n");
+				printf("|");
+			scanf("%s", &tel);
+				printf("\n|SENHA:\n");
+				printf("|");
+			scanf("%s", &senha2);
+				printf("\n|CONFIRMANDO SENHA:\n");
+				printf("|");
+			scanf("%s", &senha3);
+				printf("\n|CPF:\n");
+				printf("|");
+			scanf("%s", &cpf);
+			
+			
+			if(strcmp (senha2, senha3) == 0){
+			
+			
+			printf("\n\n------------------------\n");
+			printf("       CONFIRMAÇÃO      \n");
+			printf("------------------------\n");
+			
+				printf("|%s", nome);
+				printf("|%s\n", email);
+				printf("|%s\n", tel);
+				printf("|%s\n", senha2);
+				printf("|%s\n\n", cpf);
+				system("pause");
+				system("cls");
+				break;
+				goto meio;
+		}else {
+			
+			printf("as senhas não são identicas\n\n");
+			goto voltar;
+			
+		}
+}
+meio:
+		
+	printf("------------------------\n");
+	printf("|BEM VINDO A SMART LOOK|\n");
+	printf("------------------------\n\n");
+	
+		printf("|1 - DENUNCIAS \n");
+		printf("|2 - PROJETO\n");
+		printf("|3 - SAIR\n");
+		
+		scanf("%d", &menu2);
+		
+		switch(menu2){
+
+			case 1:
+			printf("------------------------\n");
+			printf("        DENUNCIAS       \n");
+			printf("------------------------\n");
+			
+			printf("1 - descarte irregular de lixo em via pública na Vila Sobrinho\n");
+			printf("2 - Entulho e lixo em via pública ou terrenos particulares\n");
+			printf("3 - SAMAE recebe denúncia de descarte irregular de lixo no Bairro das Nações\n");
+			scanf("%d", &menu3);
+			
+				switch(menu3){
+					case 1:
+						system("cls");
+						system("color 3");
+						
+						printf("\ndescarte irregular de lixo em via pública na Vila Sobrinho\n\n");
+						
+						printf("Descarte irregular de lixo incomoda moradores do Bairro Vila Sobrinho,\n");
+						_sleep(100);
+						printf("região norte de Campo Grande. Nas imagens enviadas ao Campo Grande\n");
+						_sleep(100);
+						printf("News pelo Direto das Ruas, é possível observar o lixo e restos de móveis\n");
+						_sleep(100);
+						printf("obstruindo a passagem pela calçada da rua Coronel Miquelino Barbosa, na\n");
+						_sleep(100);
+						printf("esquina com a Rua Fernando de Noronha.\n\n");
+						_sleep(100);
+						printf("Ronei Mota, de 53 anos, mora com a esposa no bairro há 14 anos, e relata\n");
+						_sleep(100);
+						printf("que o problema é recorrente no local. O empresário conta que através de \n");
+						_sleep(100);
+						printf("um grupo no WhatsApp, ele e os demais moradores da região monitoram \n");
+						_sleep(100);
+						printf("as atividades dentro do bairro, e garante que quem faz o descarte são \n");
+						_sleep(100);
+						printf("pessoas de fora. “Pessoas trazem lixo de fora para descartar aqui, aí vira um \n");
+						_sleep(100);
+						printf("lixão mesmo”, conta.\n");
+						_sleep(100);
+						
+						system("pause");
+						system("cls");
+						system("color F");
+						
+						goto meio;
+						break;
+						
+						case 2: 
+						system("cls");
+						system("color 3");
+						
+						printf("\nEntulho e lixo em via pública ou terrenos particulares\n\n");
+						
+						printf("Segundo dados do último levantamento da Prefeitura de São Paulo, por\n");
+						_sleep(100);
+						printf("meio da Amlurb (Autoridade Municipal de Limpeza Urbana), na cidade há\n");
+						_sleep(100);
+						printf("2.823 pontos viciados de descarte irregular de lixo e entulho em ruas,\n");
+						_sleep(100);
+						printf("praças, avenidas e terrenos.\n\n");
+						_sleep(100);
+						printf("Como combate, a entidade afirma que foram criadas ações regionais a fim\n");
+						_sleep(100);
+						printf("de minar esses pontos, como entrega de informativos para a comunidade,\n");
+						_sleep(100);
+						printf("além da limpeza dos locais.\n\n");
+						_sleep(100);
+						printf("No entanto, em terrenos públicos e privados ainda é possível encontrar\n");
+						_sleep(100);
+						printf("grandes aglomerações de descarte irregular.\n\n");
+						_sleep(100);
+						printf("O descarte de lixos/entulhos irregular é crime, com multas que variam de\n");
+						_sleep(100);
+						printf("R$ 790,18 (até 50 kg) e R$ 15.520,00 (acima de 50 kg).\n");
+						_sleep(100);
+						
+						system("pause");
+						system("cls");
+						system("color F");
+							
+						goto meio;
+						break;
+						
+						case 3:
+						system("cls");
+						system("color 3");
+						
+						printf("\nSAMAE recebe denúncia de descarte irregular de lixo no Bairro das Nações\n\n");
+						_sleep(100);
+						printf("Na manhã desta terça-feira, 1º de fevereiro, servidores do SAMAE receberam a denúncia de um\n");
+						_sleep(100);
+						printf("crime ambiental na localidade de Tifa Uecker, no Bairro das Nações, onde havia embalagens de\n");
+						_sleep(100);
+						printf("lixo e diversos resíduos espalhados às margens da via.\n\n");
+						_sleep(100);
+						printf("Prontamente, uma equipe da autarquia foi designada ao local para iniciar os serviços de\n");
+						_sleep(100);
+						printf("limpeza. Importante reforçar que, além de prejudicar o meio ambiente e comprometer a\n");
+						_sleep(100);
+						printf("qualidade de vida, descartar resíduos de forma irregular caracteriza crime ambiental, o que\n");
+						_sleep(100);
+						printf("resulta em punições aos praticantes da ação.\n\n");
+						_sleep(100);
+						printf("De acordo com o Artigo 54 da Lei de Crimes Ambientais nº 9.605/98, “Causar poluição de\n");
+						_sleep(100);
+						printf("qualquer natureza em níveis tais que resultem ou possam resultar em danos à saúde humana,\n");
+						_sleep(100);
+						printf("ou que provoquem a mortandade de animais ou a destruição significativa da flora: Pena –\n");
+						_sleep(100);
+						printf("reclusão, de um a quatro anos, e multa)”.\n\n");
+						_sleep(100);
+						printf("No município de Timbó há também a Lei Complementar nº 364/2008, onde no Artigo 66, Inciso\n");
+						_sleep(100);
+						printf("I, está especificado que “Para preservar a estética e a higiene pública é proibido: I – manter\n");
+						_sleep(100);
+						printf("terrenos, baldios ou não, com detritos ou vegetação nociva à saúde, segurança pública ou de\n");
+						_sleep(100);
+						printf("terceiros”.\n");
+						_sleep(100);
+						system("pause");
+						system("cls");
+						system("color F");
+							
+						goto meio;
+						break;
+						
+				}
+			case 2:
+				
+				printf("------------------------\n");
+				printf("|BEM VINDO A SMART LOOK|\n");
+				printf("------------------------\n\n");
+	
+				printf("PROJETOS\n");
+				
+				printf("1 - Ecobarreira Arroio Dilúvio, Porto Alegre\n");
+				printf("2 - Projeto Ecoboat/Renove\n");
+				printf("3 - Eco barreira Rio Atuba\n");
+				printf("4 - Ecobarreira da Escola Municipal de Recife\n");
+				
+				scanf("%d", &menu4);
+				switch(menu4){
+					case 1:
+						system("cls");
+						system("color 3");
+					printf("Ecobarreira Arroio Dilúvio, Porto Alegre\n\n");	
+					_sleep(100);
+					printf("Em Porto Alegre foi instalada uma ecobarreira no Arroio Dilúvio – um córrego da cidade. A\n");
+					_sleep(100);	
+					printf("barreira é uma estrutura flutuante, feita a partir de materiais reciclados e que foi instalada para\n");
+					_sleep(100);	
+					printf("ajudar na preservação do Lago Guaíba, que banha cinco cidades gaúchas, com alta importância\n");
+					_sleep(100);	
+					printf("ambiental, econômica e histórico cultural da região\n\n");
+					_sleep(100);	
+					printf("O objetivo da barreira é recolher o lixo flutuante que vem pelo córrego e impedir que chegue ao\n");
+					_sleep(100);
+					printf("lago. Os resíduos retidos no local são recolhidos diariamente pelo Departamento Municipal de\n");
+					_sleep(100);	
+					printf("Limpeza Urbana.\n\n");
+					_sleep(100);	
+					printf("Desde a sua implementação, em 2016, até hoje, já foram retiradas mais de 500 toneladas de\n");	
+					_sleep(100);
+					printf("resíduos plásticos. O projeto foi pioneiro na América Latina. Sendo mantido integralmente pela\n");	
+					_sleep(100);
+					printf("empresa SafeWeb, com apoio das Secretarias Municipais do Meio Ambiente e Sustentabilidade e\n");
+					_sleep(100);	
+					printf("a de Serviços Urbanos, além do professor Gino Gehling, do instituto de Pesquisas Hidráulicas da\n");
+					_sleep(100);
+					printf("Universidade Federal do Rio Grande do Sul (UFRGS).\n");	
+					_sleep(100);
+					
+					system("pause");
+					system("cls");
+					system("color F");
+					
+					goto meio;
+					break;
+					
+					case 2:
+						system("cls");
+						system("color 3");
+						
+					printf("Projeto Ecoboat/Renove\n\n");
+					_sleep(100);
+					printf("O projeto Ecoboat/Renove atua no Rio de Janeiro e consiste em um barco coletor de lixo. A\n");
+					_sleep(100);
+					printf("embarcação conta com uma pá na proa, que ajuda a recolher os resíduos sólidos da água, com\n");
+					_sleep(100);
+					printf("capacidade de até quatro toneladas de detritos.\n\n");
+					_sleep(100);
+					printf("Quando o contêiner lota, todo o material recolhido é descarregado em um caminhão, passando\n");
+					_sleep(100);
+					printf("por um centro de triagem para reciclagem dos resíduos. Essa segunda parte do trabalho é feita\n");
+					_sleep(100);
+					printf("por empresas devidamente licenciadas pelos órgãos ambientais competentes.\n\n");
+					_sleep(100);
+					printf("O Ecoboat já atuou no entorno do Cais do Porto do Rio de Janeiro, Píer Mauá (Museu do\n");
+					_sleep(100);
+					printf("Amanhã), Ilha do Governador, Niterói e até mesmo na Ilha de Villegagnon, antes das\n");
+					_sleep(100);
+					printf("competições de iatismo nos Jogos Olímpicos Rio 2016.\n");
+					_sleep(100);
+					
+					system("pause");
+					system("cls");
+					system("color F");
+					
+					goto meio;
+					break;
+					
+					case 3:
+					system("cls");
+					system("color 3");
+					
+					printf("Eco barreira Rio Atuba\n\n");
+					_sleep(100);
+					printf("Em Curitiba, o Rio Atuba também ganhou uma ecobarreira para reter o lixo sólido que flutuava\n");
+					_sleep(100);
+					printf("pelas águas do rio. O projeto foi desenvolvido por um morador da região.\n\n");
+					_sleep(100);
+					printf("Diego Saldanha aprendeu a nadar no rio Atuba e foi testemunha do acúmulo de lixo com o\n");
+					_sleep(100);
+					printf("passar dos anos. Ele reuniu centenas de garrafas pet de dois litros em uma rede para criar a\n");
+					_sleep(100);
+					printf("barreira flutuante, unindo uma margem do rio à outra e impedindo que detritos circulem\n");
+					_sleep(100);
+					printf("livremente pela correnteza.\n\n");
+					_sleep(100);
+					printf("Desde a sua construção, em 2017, Diego estima já ter retirado cerca de três toneladas de lixo do\n");
+					_sleep(100);
+					printf("rio.\n");
+					_sleep(100);
+					
+					system("pause");
+					system("cls");
+					system("color F");
+					
+					goto meio;
+					break;
+					
+					case 4:
+					system("cls");
+					system("color 3");
+					
+					printf("Ecobarreira da Escola Municipal de Recife\n\n");
+					_sleep(100);
+					printf("Estudantes Escola Municipal Professor Antônio de Brito Alves, no Recife, também decidiram\n");
+					_sleep(100);
+					printf("criar sua própria ecobarreira. O modelo também foi desenvolvido com garrafas pet unidas por\n");
+					_sleep(100);
+					printf("um cabo, para reduzir a quantidade de resíduos sólidos no canal do ABC, que fica em frente à\n");
+					_sleep(100);
+					printf("escola.\n\n");
+					_sleep(100);
+					printf("Os alunos foram orientados por quatro professores e começaram as pesquisas para desenvolver\n");
+					_sleep(100);
+					printf("o projeto ainda em 2015. Eles constataram que cerca de 70% dos moradores da região não sabia\n");
+					_sleep(100);
+					printf("quanto tempo o lixo leva para se decompor, e por isso jogavam resíduos no canal.\n\n");
+					_sleep(100);
+					printf("O projeto ganhou reconhecimento, conquistando primeiro lugar na Feira de Conhecimentos do\n");
+					_sleep(100);
+					printf("Recife em 2018 e também credenciamento para uma feira de ciência e tecnologia no Paraguai\n");
+					_sleep(100);
+					printf("neste ano.\n");
+					_sleep(100);
+					
+					system("pause");
+					system("cls");
+					system("color F");
+					
+					goto meio;
+					break;	
+				}
+				
+				break;
+			
+			case 3:
+				
+				printf("VOLTE SEMPRE\n");
+				printf("---");
+				_sleep(100);
+				printf("---");
+				_sleep(200);
+				printf("---");
+				_sleep(300);
+				printf("---");
+				_sleep(400);
+				
+				return 0;
+		}
+		printf("meio");
+}
